@@ -3,7 +3,7 @@
         <template #field :class="{'border-danger border': hasErrors}">
             <div class="attach-many-container" :class="{'border-danger border': hasErrors}">
                 <div v-if="currentField.showToolbar" class="flex items-center border border-b-0 border-gray-100 dark:border-gray-700">
-                    <div v-if="preview" class="flex justify-center p-3 w-full">
+                    <div v-if="preview" class="flex items-center justify-center h-12 w-full">
                         <div class="text-xl">{{ __('Selected Items') }} ({{ selected.length  }})</div>
                     </div>
                     <div v-else class="flex items-center w-full">
@@ -23,7 +23,7 @@
                     </div>
                     <CheckboxWithLabel
                         v-else
-                        class="p-3 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700"
+                        class="px-3 py-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700"
                         v-for="resource in resources"
                         :key="resource.value"
                         :checked="selected.includes(resource.value)"
