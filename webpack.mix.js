@@ -6,7 +6,4 @@ mix
     .setPublicPath('dist')
     .js('resources/js/field.js', 'js')
     .vue({ version: 3 })
-    .postCss("resources/css/field.css", "css", [
-        require("tailwindcss"),
-    ])
     .nova("dillingham/nova-attach-many")
